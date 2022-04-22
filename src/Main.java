@@ -9,24 +9,61 @@ public class Main {
     //private static int _tamanho;
 
     public static void main(String[] args) {
+        chamada();
+    }
 
-
-        // System.out.print("Escreva a quantidade de leitura dos números: ");
-        //  _tamanho = ler.nextInt();
-
+    public static void chamada(){
         int[] numbersq17 = new int[3];
         int[] numbersq18 = new int[10];
 
-        //Q17(numbersq17);
-        //Q18(numbersq18);
-        //Q19();
-        //Q20();
-        //Q21();
-        //Q22();
-        //Q23();
+
+        Inicio t1 = new Inicio();
+
+        var escolha = t1.principal();
+
+        switch (escolha) {
+            case 17:
+                Q17(numbersq17);
+                t1.Repetir();
+                break;
+            case 18:
+                Q18(numbersq18);
+                t1.Repetir();
+                break;
+            case 19:
+                Q19();
+                t1.Repetir();
+                break;
+            case 20:
+                Q20();
+                t1.Repetir();
+                break;
+            case 21:
+                Q21();
+                t1.Repetir();
+                break;
+            case 22:
+                Q22();
+                t1.Repetir();
+                break;
+            case 23:
+                Q23();
+                t1.Repetir();
+                break;
+            case 24:
+                Q24 questao24 = new Q24();
+                questao24.Alunoestacio();
+                t1.Repetir();
+                break;
+            case 25:
+                Q25 questao25 = new Q25();
+                questao25.FuncTriangulo();
+                t1.Repetir();
+                break;
+        }
     }
 
-    public static void Q17(int[] numbers) {
+    public static void Q17(int[] numbers){
 
         //qual é o maior, qual é o menor dentre 3 números;
         int maior = 0;
@@ -246,14 +283,6 @@ public class Main {
         System.out.printf("\nA idade media do grupo eh:  %d", media);
         System.out.printf("\nA pessoa com a maior idade tem: %d", maior);
         System.out.printf("\nA pessoa com a menor idade tem: %d", menor);
-
-    }
-
-    public static void Q24(){
-
-    }
-
-    public static void Q25(){
 
     }
 }
